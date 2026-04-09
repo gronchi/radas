@@ -55,6 +55,7 @@ def calculate_time_evolution(dataset: xr.Dataset) -> xr.Dataset:
         input_core_dims=[("dim_charge_state",), ("dim_charge_state",), (), ()],
         output_core_dims=[("dim_charge_state", "dim_time")],
     ).assign_coords(dim_time=evaluation_times)
+    charge_state_fraction.attrs["units"] = "dimensionless"
 
     return charge_state_fraction
 
