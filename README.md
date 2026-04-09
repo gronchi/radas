@@ -47,12 +47,12 @@ Because we've added `in-project = true` in `poetry.toml`, the project will insta
 
 Once you have installed `radas`, you should be able to run the following snippet
 ```
-poetry run radas --species=hydrogen --plot
+poetry run radas --species=hydrogen
 ```
 where `--species` can be
 * a specific species such as `hydrogen` or `tungsten`
 * `all` which runs all species which have available data
-* `none` which doesn't perform any analysis, but can be combined with `--plot` to generate the output plots from existing NetCDF files
+* `none` which doesn't perform any analysis, but will generate the output plots from existing NetCDF files
 
 If anything goes wrong, the script will drop into an `ipdb` interpreter so you can debug any issues. 
 
